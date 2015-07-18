@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    
+    <style>
+        /* general stuff */
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+        }
+
+        p, div {
+            font-size: 16px;  
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        #all-questions {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* For the questions */
+        hr {
+            margin: 10px 0;
+            background-color: red;
+            margin-right: 25px; /** makes the line end where the input field ends */
+        }
+
+        .question {
+            display: inline-block;
+            width: 100%;
+            margin: 0px 0;
+        }
+        
+        .question > div {
+            clear: both;
+            padding: 10px 0;
+        }
+
+        .question-title {
+            display: inline-block;
+            font-size: 28px;
+            font-weight: 400;
+            float: left; 
+        }
+
+        .input-wrapper {
+            width: 205px; /* vertically aligns the input fields. sass/less variables might be a better solution */
+            float: right;
+            margin-top: 10px; /* TODO: clean solution that also works with different font size */ 
+
+        }
+        .input-wrapper > input,  .input-wrapper > select {
+            height: 25px;
+            width: 175px;
+            background: white;
+            border: 1px solid grey;
+        }
+
+        .explenation {
+            color: #333;
+        }
+        
+        /* other stuff */
+        #continue {
+            float: right;
+            margin-right: 25px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Mietpreise</h1>
+
+<div id="all-questions">
+    <div class="question">
+        <div>
+           <p class="question-title">Kaltmiete</p>
+           <div class="input-wrapper"><input> €</div>
+        </div>
+        <div class="explenation">Deine Miete in ohne Nebenkosten wie Strom, Wasser, Heizung, Hausverwaltung, Garage, etc.</div>
+    </div>
+    <hr>       
+    <div class="question">
+        <div style="width: 100%">
+           <p class="question-title">Wohnungsgröße</p>
+           <div class="input-wrapper"><input> m²</div>
+        </div>
+        <div class="explenation">Die Größe deiner Wohnung</div>
+    </div>
+    <hr> 
+    <div class="question">
+        <div>
+           <p class="question-title">Postleitzahl</p>
+           <div class="input-wrapper"><input></div>
+        </div>       
+        <div>
+           <p class="question-title">Stadtbezirk</p>
+           <div class="input-wrapper">
+               <select>
+                   <option value="Giesing" selected>Giesing</option> 
+                   <option value="Haidhausen">Haidhausen</option>
+                   <option value="Laim">Laim</option>
+               </select>
+           </div>
+        </div>
+        <div class="explenation">Wir benötigen deine Postleitzahl und deinen Stadtbezirk, um die unterschiedlichen Mieten in den verschiedenen Teilen Münchens erfassen zu können</div>
+    </div>
+    <hr>
+    
+    <div id="continue"> Weiter </div>
+</div>
+
+</body>
+</html>
